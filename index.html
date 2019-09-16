@@ -1,137 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Madushanka</title>
+	<title>Madushanka Kahawa</title>
+<!-- bootstrap -->
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- icon -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<!-- animation -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-	<link rel="shortcut icon" href="picture/profilPic.jpg">
+<!-- index css -->
+	<link rel="stylesheet" type="text/css" href="script/indexCss.css">
+<!-- tilte image -->
+	<link rel="shortcut icon" href="picture/mk.png">
 
-	<style type="text/css">
-		.fa{
-			padding: 5px;
-  			font-size: 30px;
-  			width: 40px;
-  			height: 40px;
-  			text-align: center;
-  			margin-right: 10px;
-		}
-	</style>
+	<meta charset="utf-8">
+	<meta name="keyword" content="Madushanka, Kahawa">
+	<meta name="author" content="madushanka">
+	<meta name="contact" content="madushankakahawa@gmail.com">
+
+	<script src="script/home.js"></script>
+	<script src="script/education.js"></script>
+	<script src="script/skil.js"></script>
+	<script src="script/project.js"></script>
 </head>
-<body>
+<body onload="loadHome()" >
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+		    <ul class="navbar-nav">
+		      	<li>
+		      		<button class="btn" onclick="loadHome()">Home</button>
+					<button class="btn" onclick="loadEduction()">Education</button>
+					<button class="btn" onclick="loadSkill()">Skill</button>
+					<button class="btn" onclick="loadProject()">Project</button>
+		      	</li>
+		    </ul>
+		</div>
+	</nav>
 	<div class="container-fluid">
-		<button class="btn btn-primary" onClick="document.getElementById('resum').scrollIntoView({behavior: 'smooth'});">resum</button>
-		<!-- about me -->
-		<div class="row">
-			<!-- my profile picture -->
-			<div class="col col-lg-4 col-sm-12" style="">
-				<div class="row justify-content-center">
-					<div class="animated zoomIn">
-						<img class="rounded-circle" src="picture/profilPic.jpg" style="height: 300px; width: 300px;margin-top: 50px; margin-bottom: 50px;" alt="profile picture">
+		<div>
+			<div class="row">
+				<div class="col-4"></div>
+				<div class="col-8" id="testtest"></div>
+			</div>
+		</div>
+		<!--  -->
+		<div id="">
+			<div class="row justify-content-center">
+				<div class="col-12 col-sm-12 col-md-5 col-lg-4">
+					<div class="row justify-content-center">
+						<div class="animated zoomIn" >
+							<img class="rounded-circle" src="picture/profilPic.png" style="height: 250px; width: 250px;margin-top: 50px; margin-bottom: 50px;" alt="profile picture">
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- my details -->
-			<div class="col col-lg-8 col-sm-12" style="">
-				<div class="row justify-content-center">
-					<div class="animated slideInRight  ">
-						<div class="col">
-							<h5 style="font-size: 30px; margin-top: 100px;">Hello,I'am</h5>
-							<h1 style="font-size: 70px; ">Madushanka Kahawa</h1>
-							<!-- <p style="margin-top: 25px; font-size: 20px;">I am a software engineering undergraduate of University of Kelaniya and I am willing to learn new technology always.hands on with java, c , php and also sql html css.</p> -->
-							<div class="row">
-								<div class="col">
-									<a href="https://m.facebook.com/madushanka.kahawa" target="" title="">
-										<i class="fa fa-facebook animated bounceIn" style="background-color: #3b5998;color: white;"></i>
-									</a>
-									<a href="https://github.com/madushanka2016" target="" title="">
-										<i class="fa fa-github animated bounceIn" style="color: white; background-color: #333;"></i>
-									</a>
-									<a href="" target="" title="">
-										<i class="fa fa-linkedin animated bounceIn" style="background-color: #0077b5;color: white;"></i>
-									</a>
-									<a href="" target="" title="">
-										<i class="fa fa-stack-overflow animated bounceIn" style="background-color: #f48024;color: white;"></i>
-									</a>
-									<a href="https://medium.com/@madushankakahawa" target="" title="">
-										<i class="fa fa-medium animated bounceIn" style="background-color: red;"></i>
-									</a>
-									<a href="" target="" title="">
-										<i class="fa fa-hackerrank animated bounceIn" style="background-color: red;color: black;"></i>
-									</a>
-								</div>
-							</div>
-						</div> 	
-					</div>
-						
-				</div>
+				<div class="col-12 col-sm-12 col-md-7 col-lg-8" id="mainGril"></div>
 			</div>
 		</div>
-		<hr>
-		<div class="raw">
-			<div class="col">
-				<table width="593" style="border: solid; border-width:medium;">
-					<tbody>
-						<tr >
-							<td width="100" height="40">Email	:</td>
-							<td width="475">
-								<a href="madushankakahawa@gmail.com">madushankakahawa@gmail.com</a>
-							</td>
-						</tr>
-						<tr>
-							<td></td>
-						</tr>
-						<tr>
-							<td height="40">Mobile	:</td>
-							<td>+94 76 694 0764</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-		<!-- Resume -->
-		<div class="row" id="resum">
-			<div class="col-4">
-				<h2 style="text-align: center;"><u>Education</u></h2>
-			</div>
-			<div class="col-8">
-				<h2>Higher Education</h2>
-				<p><i>Undergraduate of University of Kelaniya | bsc(hons)in software engineering</i><ul>2018 - present</ul></p>
-				<hr>
-				<h2>Secondary Education</h2>
-				<p><i>Vidyaloka College Galle , Sri Lanka</i><ol>2003-2016</ol></p>
-				<p>Activities & societies -</p>
-				<ul>A player of school badminton team (2008-2015) </ul>
-				<ul>junior prefect (2011-2013)</ul>
-				<ul>Senior prefect (2014-2016)</ul>
-			</div>
-		</div>
-		<hr>
-		<div class="row">
-			<div class="col-4">
-				<h2 style="text-align: center;"><u>Skill</u></h2>
-			</div>
-			<div class="col-8">
-				
-			</div>
-		</div>
-		<hr>
-		<div class="row">
-			<div class="col-4">
-				<h2 style="text-align: center;"><u>Project</u></h2>
-			</div>
-			<div class="col-8">
-				
-			</div>
-		</div>
-		<div class="row" id="middle">
-			<div class="col">
-				<div style="background-color: red;height: 900px;" ></div>
-			</div>
-		</div>
+		<!--  -->
+		
 
 		
+		<!-- <footer class="row" id="middle">
+			<div class="col">
+				<div style="background-color: green;height: 100px;" >a</div>
+			</div>
+		</footer> -->
 	</div>
 </body>
 </html>
